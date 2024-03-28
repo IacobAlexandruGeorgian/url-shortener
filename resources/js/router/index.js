@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
-import ExampleComponent from "../components/ExampleComponent.vue";
+import ExampleComponent from "../components/TheHeader.vue";
+import DashboardPage from "../pages/DashboardPage.vue";
 
-const routes = [{ path: "/", component: ExampleComponent }];
+const routes = [{ path: "/", component: DashboardPage }];
 
 const router = createRouter({
     history: createWebHistory("/"),
