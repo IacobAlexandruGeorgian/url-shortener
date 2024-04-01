@@ -1,7 +1,7 @@
 <template>
     <the-header></the-header>
-    <the-form></the-form>
-    <the-list></the-list>
+    <the-form @form-submitted="handleFormSubmitted"></the-form>
+    <the-list :urls="urls"></the-list>
 </template>
 
 <script>
@@ -17,7 +17,15 @@ export default {
         TheList
     },
     data() {
-        
+        return {
+            urls: []
+        }
+    },
+
+    methods: {
+        handleFormSubmitted(url) {
+            this.urls.push(url);
+        }
     }
 }
 </script>

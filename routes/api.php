@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,4 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+Route::post('store', [DashboardController::class, 'store'])->name('store');
+Route::get('redirect/{slug}', [DashboardController::class, 'redirectUrl'])->name('redirect.url');
